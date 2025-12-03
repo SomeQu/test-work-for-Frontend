@@ -6,7 +6,7 @@
 
 // Plugins
 import { registerPlugins } from '@/plugins'
-
+import { setupI18n } from '@/services/i18n'
 // Components
 import App from './App.vue'
 
@@ -17,7 +17,7 @@ import { createApp } from 'vue'
 import 'unfonts.css'
 
 const app = createApp(App)
-
+setupI18n(app);
 registerPlugins(app)
 
 app.mount('#app')
