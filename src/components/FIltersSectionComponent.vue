@@ -45,7 +45,7 @@ const setFilter = (value: TasksFilterTypes) => {
       variant="tonal"
       class="mr-2"
     >
-      {{ t('tasksSummary.') }} ({{ completedTasksCount }})
+      {{ t('tasksSummary.completedTasks') }} ({{ completedTasksCount }})
     </v-btn>
   </div>
 </template>
