@@ -11,6 +11,7 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    AddTaskFormComponent: typeof import('./src/components/AddTaskFormComponent.vue')['default']
     AppbarComponent: typeof import('./src/components/AppbarComponent.vue')['default']
     AppBodyComponent: typeof import('./src/components/AppBodyComponent.vue')['default']
     FIltersSectionComponent: typeof import('./src/components/FIltersSectionComponent.vue')['default']

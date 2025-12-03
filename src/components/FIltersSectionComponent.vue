@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import type { ITask, TasksFilterTypes } from '@/types/Types'
-
-
+import { useI18n } from 'vue-i18n';
+const {t} = useI18n()
 const props = defineProps<{
   tasks: ITask[]
   currentFilter: TasksFilterTypes
@@ -29,7 +29,7 @@ const setFilter = (value: TasksFilterTypes) => {
       variant="tonal"
       class="mr-2"
     >
-      Все ({{ totalTasks }})
+      {{ t('tasksSummary.allTasks') }} ({{ totalTasks }})
     </v-btn>
     <v-btn 
       @click="setFilter('active')"
@@ -37,7 +37,7 @@ const setFilter = (value: TasksFilterTypes) => {
       variant="tonal"
       class="mr-2"
     >
-      Активные ({{ activeTasksCount }})
+      {{ t('tasksSummary.activeTasks') }} ({{ activeTasksCount }})
     </v-btn>
     <v-btn 
       @click="setFilter('completed')"
@@ -45,7 +45,7 @@ const setFilter = (value: TasksFilterTypes) => {
       variant="tonal"
       class="mr-2"
     >
-      Завершенные ({{ completedTasksCount }})
+      {{ t('tasksSummary.') }} ({{ completedTasksCount }})
     </v-btn>
   </div>
 </template>

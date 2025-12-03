@@ -32,7 +32,7 @@ export const ru = {
     },
     tasksSummary:{
         allTasks:'Всего задач',
-        completedTasks:'Завершенных',
+        completedTasks:'Выполненных',
         activeTasks:'Активных',
         percentTasks:'Процент завершения'
     }
